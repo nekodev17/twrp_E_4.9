@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/mi8937
+LOCAL_PATH := device/10or/E
 
 # Architecture
 TARGET_ARCH := arm64

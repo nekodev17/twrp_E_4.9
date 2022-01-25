@@ -14,5 +14,20 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_E.mk
+# Release name
+PRODUCT_RELEASE_NAME := E
+
+$(call inherit-product, build/target/product/embedded.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=msm8937
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := E
+PRODUCT_NAME := omni_E
+PRODUCT_BRAND := 10or
+PRODUCT_MODEL := MSM8937
+PRODUCT_MANUFACTURER := 10or
